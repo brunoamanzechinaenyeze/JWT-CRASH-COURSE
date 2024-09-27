@@ -50,7 +50,7 @@ e.g:
 --> h) `userDB.setUsers([...userDB.users, newUser])`
 --> i) The code in `h)` stores add the newUser to the existing array of object in the JSON db.
 --> j) Now let's write the file to the existing JSON DB😁
---> k) await fsPromises.writeFile(path.join(\_\_dirname, "user.json")), JSON.stringify(userDB.users)
+--> k) await fsPromises.writeFile(path.join(__dirname, "user.json")), JSON.stringify(userDB.users)
 --REMEMBER WE ARE USING ASYNCHRONOUS FUNCTION, the error in the writeFile is sorted out in the catch err code block and we use fsPromises too in the async function--
 
 --> res.status(201).json({
