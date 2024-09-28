@@ -24,7 +24,7 @@ ACCESS_TOKEN_SECRET = 559de9b3dc0828ce7d5f7eb74163440a2211a3efbb3f72ae1c0e492249
 REFRESH_TOKEN_SECRET = 87a9afebd2f60b1a5afdda3db602d2dbae3efe4177d57ffb70b606e540f2228e12355735074d89de06b4cc48d9180a68b1d2326867ec993666012607d394a170
 
 we then write something like the above when we already have the randomly generated code
-N.B: run the require('crypto').randomBytes.toSting('hex') twice to get two values for both the  ACCESS and REFRESH TOKE
+N.B: run the require('crypto').randomBytes.toSting('hex') twice to get two values for both the ACCESS and REFRESH TOKE
 
 --> a) NOW LET’S SET UP THE REGISTER AUTH PAGE
 
@@ -142,13 +142,16 @@ const match = bcrypt.compare(pwd, foundUser.pwd);
 then we have to check of the password matches the user's password
 
 if (match) {
-    The sign is first going to take our payload, which is essentially what we want to serialize and we are going to serialize a user object
+The sign is first going to take our payload, which is essentially what we want to serialize and we are going to serialize a user object
 
     and in order to serialize it we passed in a key into the jwt.sign() method
+
 const accessToken = jwt.sign(
-        "username": foundUser.username,
-         process.env.ACCESS_TOKEN_SECRET,
-         { expiresIn: 
-         '40s'}
-    )
+"username": foundUser.username,
+process.env.ACCESS_TOKEN_SECRET,
+{ expiresIn:
+'40s'}
+)
 }
+
+### TO BE CONTINUED
